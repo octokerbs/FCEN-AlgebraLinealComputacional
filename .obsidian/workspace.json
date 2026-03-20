@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Axoft/TiposComprobantesIIBB.md",
+                "file": "Apuntes/Ecuaciones Lineales.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TiposComprobantesIIBB"
+              "title": "Ecuaciones Lineales"
             }
           }
         ]
@@ -170,6 +170,24 @@
   },
   "active": "d0b67a2a7a589b40",
   "lastOpenFiles": [
+    "Algoritmos/pivoteo_completo.py",
+    "Algoritmos/pivoteo_parcial_escalado.py",
+    "Algoritmos/pivoteo_parcial.py",
+    "Algoritmos/eliminacion_gaussiana.py",
+    "Algoritmos/venv/bin/activate.csh",
+    "Algoritmos/venv/bin/activate.fish",
+    "Algoritmos/venv/bin/activate",
+    "Algoritmos/venv/bin/Activate.ps1",
+    "Algoritmos/venv/lib/python3.14/site-packages/pip-25.1.1.dist-info/RECORDonu88d0x.tmp",
+    "Algoritmos/venv/lib/python3.14/site-packages/pip-25.1.1.dist-info/REQUESTED",
+    "Algoritmos/venv/lib/python3.14/site-packages/pip-25.1.1.dist-info/INSTALLER",
+    "assets/Pasted image 20260320020305.png",
+    "assets/Pasted image 20260320020013.png",
+    "assets/Pasted image 20260320015300.png",
+    "assets/Pasted image 20260320014432.png",
+    "assets/Pasted image 20260320013820.png",
+    "assets/Pasted image 20260320012916.png",
+    "Apuntes/Ecuaciones Lineales.md",
     "drawings/Drawing 2026-03-16 16.39.48.excalidraw.md",
     "Axoft/TiposComprobantesIIBB.md",
     "Axoft/Flujo.md",
@@ -177,20 +195,14 @@
     "Axoft/Código.md",
     "Axoft/Migraciones.md",
     "drawings/Drawing 2026-03-16 12.55.26.excalidraw.md",
-    "drawings",
     "drawings/Drawing 2026-03-16 06.19.02.excalidraw.md",
     "Excalidraw/Template.md",
     "4. Capa de Transporte.md",
-    "Excalidraw",
     "diagrams/drawing2026-03-16 6.09AM.md",
     "drawings/Drawing 2026-03-16 06.05.01.excalidraw.md",
-    "diagrams",
-    "Excalidraw",
     "drawings/Drawing 2026-03-16 06.00.47.excalidraw.md",
     "drawings/Drawing 2026-03-16 06.00.29.excalidraw.md",
-    "4. Capa de Transporte.md.tmp.154562.1773642895286",
     "Preguntas.md",
-    "Computer Networks A Systems Approach by Larry L. Peterson, Bruce S. Davie (z-lib.org).pdf",
     "8. Seguridad.md",
     "0. Teoria de la Informacion.md",
     "6. Capa de Presentacion.md",
@@ -200,22 +212,10 @@
     "2. Capa de Enlace.md",
     "1. Capa Fisica.md",
     "Correciones tipicas.md",
-    "Workflow-ABMs.md",
-    "1. Fundamentos.md",
     "assets/Pasted image 20260204223137.png",
     "assets/Pasted image 20260204223122.png",
-    "assets",
     "assets/7dfdf910-323a-4a89-a7f1-15579febe70e-tldrawFile.png",
     "assets/Pasted image 20250920200109.png",
-    "Sistemas Operativos - Sincronizacion entre Procesos - 2C2024 - Kerbs Octavio Dario.pdf",
-    "snippets/headings.css",
-    "snippets",
-    "assets/Pasted image 20250915025620.png",
-    "assets/Pasted image 20250914232648.png",
-    "assets/Pasted image 20250725125843.png",
-    "assets/Pasted image 20250725124643.png",
-    "assets/Pasted image 20250725124226.png",
-    "assets/Pasted image 20250724172850.png",
     "Untitled.canvas"
   ]
 }
