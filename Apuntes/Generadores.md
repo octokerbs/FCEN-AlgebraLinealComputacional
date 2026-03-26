@@ -1,40 +1,60 @@
-En vez de listar infinitos vectores, encontrás los **vectores mínimos** que los generan a todos. Eso se hace con Gauss, cada variable libre da un generador.
+## Definicion
+Un **sistema de generadores** de un subespacio $S$ es un conjunto de vectores $\{v_1, v_2, \dots, v_k\}$ tal que todo vector de $S$ se puede escribir como combinacion lineal de ellos:
 
-Un sistema de generadores es el **conjunto mínimo de vectores con los que podés construir cualquier vector del espacio**, usando sumas y multiplicaciones por escalares. Como una analogía: igual que el rojo, verde y azul generan cualquier color, los vectores generadores "mezclan" para formar cualquier vector del espacio.
+$$S = \langle v_1, v_2, \dots, v_k \rangle = \{ \alpha_1 v_1 + \alpha_2 v_2 + \dots + \alpha_k v_k \mid \alpha_i \in \mathbb{R} \}$$
 
-Siempre que haya infinitas soluciones, hay variables libres, y cada variable libre da un generador. El procedimiento es siempre el mismo:
+- No son necesariamente linealmente independientes (puede haber redundantes).
+- Si ademas son L.I., forman una **base** de $S$. La cantidad de vectores en una base es siempre $\dim(S)$. En particular, para que generen todo $\mathbb{R}^n$ se necesitan exactamente $n$ vectores L.I.
 
-1. **Gauss** para triangular
-2. **Sustitución hacia atrás** para despejar las variables no libres
-3. **Factorizar** cada variable libre → un vector generador por cada una
+### Dos formas de recibir un subespacio
 
-Escribimos las variables pivote en base a las libres. Generalmente con vectores unitarios (1, 0, 0), (0,1,0), etc. Asegurando independencia lineal.
+| Te dan                                               | Que hacer                                                           |
+| ---------------------------------------------------- | ------------------------------------------------------------------- |
+| $S = \langle v_1, v_2, \dots \rangle$ (generadores)  | Ya los tenes. Podes eliminar redundantes para obtener una base.     |
+| $S = \{ x \in \mathbb{R}^n : Ax = 0 \}$ (ecuaciones) | Resolver el sistema homogeneo. Cada variable libre da un generador. |
+|                                                      |                                                                     |
 
-|Cómo te dan el espacio|Generadores|
-|---|---|
-|S = ⟨v₁, v₂, ...⟩|ya están dados, solo eliminás redundantes|
-|{x ∈ ℝⁿ : condiciones}|resolvés el sistema = 0, usás variables libres|
+## Algoritmo
 
-Dado una matriz puedo ver que vectores son L. I. si los pongo como **filas** y hago triangulacion. Si alguna fila se va con todos 0s implica que estaba de mas.
+### Caso 1: Te dan ecuaciones y queres generadores
 
-**Vectores como filas → eliminás redundantes** Las filas que se anulan eran combinación lineal de las anteriores. Las que sobreviven son tu base. Usás esto cuando te dan los generadores de un espacio.
+1. Armar la matriz $A$ del sistema $Ax = 0$.
+2. Triangular con Gauss.
+3. Identificar **variables libres** (las que no son pivote).
+4. Para cada variable libre, asignarle 1 y al resto de las libres 0.
+5. Despejar las variables pivote por sustitucion hacia atras.
+6. Cada asignacion da un vector generador.
 
-**Vectores como columnas → encontrás dependencias** Resolver Ax = 0 te da los coeficientes de las combinaciones lineales que anulan las columnas. Si hay solución no trivial, hay dependencia. Usás esto para verificar independencia lineal o encontrar el espacio nulo.
+### Caso 2: Te dan generadores y queres eliminar redundantes
 
-**Ecuaciones → dos usos**
-- Si las eliminás como filas, ves cuáles son independientes (cuántas realmente restringen el espacio)
-- Si las resolvés como sistema Ax = b, encontrás las soluciones
+1. Poner los vectores como **filas** de una matriz.
+2. Triangular con Gauss.
+3. Las filas no nulas que quedan son los generadores L.I. (una base).
+
+### Caso 3: Te dan generadores y queres ecuaciones
+
+1. Poner los generadores como **columnas** de una matriz $A$.
+2. Resolver $Ax = 0$ para encontrar relaciones, o equivalentemente plantear $A^t$ y triangular.
+3. Las ecuaciones resultantes son las ecuaciones implicitas del subespacio.
 
 
-| Lo que ponés                      | Lo que encontrás            |
-| --------------------------------- | --------------------------- |
-| vectores como filas               | cuáles son independientes   |
-| vectores como columnas + Ax=0     | dependencias / espacio nulo |
-| ecuaciones como filas             | cuáles realmente restringen |
-| ecuaciones como filas + columna b | solución del sistema        |
+## Ejemplo
 
-ecuaciones $\implies$ resolver sistema $\implies$ ​generadores (vectores)
-generadores (vectores) $\implies$ eliminar redundantes​ $\implies$ base (vectores LI)
+**Encontrar generadores de** $S = \{ (x_1, x_2, x_3) \in \mathbb{R}^3 : x_1 + 2x_2 - x_3 = 0 \}$
 
-Si me dan generadores y necesito calcular la interseccion, necesito pasarlos a ecuaciones. 
-generadores $\implies$ encontrar ecuaciones implıˊcitas $\implies$ ​ecuaciones $\implies$ juntar y resolver​ $\implies$  generadores de S∩T
+Paso 1: La ecuacion ya es el sistema $Ax = 0$ con $A = [1 \quad 2 \quad -1]$.
+
+Paso 2: Ya esta triangulada. Pivote en $x_1$, libres: $x_2, x_3$.
+
+Paso 3: Despejamos $x_1 = -2x_2 + x_3$.
+
+Paso 4: Asignamos valores a las libres:
+
+- $x_2 = 1, x_3 = 0 \implies x_1 = -2 \implies v_1 = (-2, 1, 0)$
+- $x_2 = 0, x_3 = 1 \implies x_1 = 1 \implies v_2 = (1, 0, 1)$
+
+**Resultado:** $S = \langle (-2, 1, 0), (1, 0, 1) \rangle$
+
+Verificacion: cualquier vector de $S$ cumple $x_1 + 2x_2 - x_3 = 0$.
+- $v_1$: $-2 + 2(1) - 0 = 0$ ✓
+- $v_2$: $1 + 2(0) - 1 = 0$ ✓
