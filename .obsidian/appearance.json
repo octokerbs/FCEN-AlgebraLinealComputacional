@@ -1,6 +1,6 @@
 {
   "cssTheme": "Minimal",
-  "accentColor": "#d67656",
+  "accentColor": "#68bb88",
   "baseFontSize": 20,
   "showViewHeader": false,
   "showRibbon": true,
@@ -11,5 +11,6 @@
     "monospace-size"
   ],
   "textFontFamily": "Charter",
-  "monospaceFontFamily": "JetBrainsMono Nerd Font"
+  "monospaceFontFamily": "JetBrainsMono Nerd Font",
+  "nativeMenus": false
 }

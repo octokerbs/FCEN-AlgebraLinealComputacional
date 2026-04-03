@@ -1,7 +1,5 @@
 ## Definicion
-
 Una **base** de un subespacio $S$ es un conjunto de vectores $\{v_1, \dots, v_k\}$ que cumple dos cosas:
-
 1. **Generan** $S$: todo vector de $S$ es combinacion lineal de ellos.
 2. **Son L.I.**: ninguno es combinacion lineal de los otros.
 
@@ -17,18 +15,15 @@ La cantidad de vectores en cualquier base de $S$ es siempre la misma: $\dim(S)$.
 ## Algoritmo
 
 ### Encontrar una base de un subespacio dado por generadores
-
 1. Poner los generadores como **filas** de una matriz.
 2. Triangular con Gauss.
 3. Las filas no nulas son una base.
 
 ### Encontrar una base de un subespacio dado por ecuaciones
-
 1. Resolver el sistema homogeneo $Ax = 0$ (Gauss + sustitucion hacia atras).
 2. Los vectores generadores que salen de las variables libres ya son L.I. $\implies$ son base.
 
 ### Encontrar coordenadas de $v$ en base $B = \{v_1, \dots, v_k\}$
-
 1. Armar el sistema $[v_1 | v_2 | \dots | v_k] \cdot x = v$.
 2. Resolver. El vector $x$ son las coordenadas $[v]_B$.
 
